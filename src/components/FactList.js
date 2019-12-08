@@ -6,7 +6,7 @@ import style from '../style/main';
 
 export default class Facts extends Component {
     render() {
-
+        
         this.state = {
             data: [
                 {
@@ -17,18 +17,28 @@ export default class Facts extends Component {
                     id: 2,
                     value: 'Chuck Norris can count to 10...backwards... Brain hurt? ...it\'s cool only chuck Norris gets it.'
                 }
-            ]
+            ],
+            searching: false
         }
 
         renderItems = ({item}) => {
             return <Fact {...item} />
         }
-
+        
         return (
             <ScrollView>
-                <FlatList
-                    style={style.fact_list} 
-                    data={this.state.data} renderItem={renderItems} keyExtractor={(_, index) => index.toString()} />
+                <View style={style.click_container}>
+                {
+                    this.state.searching ? 
+                    <FlatList
+                        style={style.fact_list} 
+                        data={this.state.data} 
+                        renderItem={renderItems} 
+                        keyExtractor={(_, index) => index.toString()} 
+                    /> : 
+                    <Text style={style.defaultColorFont}>Clique para pesquisar</Text>
+                }
+                </View>
             </ScrollView>
         )
     }
