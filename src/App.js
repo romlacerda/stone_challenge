@@ -6,6 +6,11 @@ import Home from './screens/Home';
 import Search from './screens/Search';
 
 import axios from 'axios'
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducer from './reducers/store';
+
+const store = createStore(reducer);
 
 export default class App extends React.Component {
     state = {
@@ -48,7 +53,9 @@ export default class App extends React.Component {
         const Navigation = createAppContainer(MainNavigator);
         
         return (
-            <Navigation tags={this.state.tags}/>
+            <Provider store={store}>
+                <Navigation tags={this.state.tags}/>
+            </Provider>
         );
     }
 }

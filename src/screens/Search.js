@@ -7,15 +7,14 @@ import styles from '../style/main';
 import TagList from '../components/TagList';
 
 export default Search = props => {
-    
     return ( 
         <React.Fragment>
             <HeaderBar title='SEARCH FACTS'/>
             <View style={styles.screen}>
                 <View style={styles.search_container}>
-                    <SearchInput />
+                    <SearchInput navigation={props.navigation}/>
                 </View>
-                <TagList tags={props.tags}/>
+                <TagList tags={props.tags} navigation={props.navigation}/>
             </View>
         </React.Fragment>
     )

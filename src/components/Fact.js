@@ -4,5 +4,5 @@ import style from '../style/main'
 
 export default props => 
     <View style={style.fact_box}>
-        <Text style={style.fontLess80}>{props.value}</Text>
+        <Text style={props.value.length > 80 ? style.fontMore80 : style.fontLess80}>{props.value}</Text>
     </View>

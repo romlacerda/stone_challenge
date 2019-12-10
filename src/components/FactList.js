@@ -4,35 +4,28 @@ import { View, Text, ScrollView, FlatList } from 'react-native';
 import Fact from './Fact';
 import style from '../style/main';
 
-export default class Facts extends Component {
+import { connect } from 'react-redux';
+
+
+class Facts extends Component {
     render() {
         
-        this.state = {
-            data: [
-                {
-                    id: 1,
-                    value: 'Lindsay Lohan was actually on her way to having a great acting career before Chuck Norris sodomized her.'
-                },
-                {
-                    id: 2,
-                    value: 'Chuck Norris can count to 10...backwards... Brain hurt? ...it\'s cool only chuck Norris gets it.'
-                }
-            ],
-            searching: false
-        }
-
         renderItems = ({item}) => {
             return <Fact {...item} />
         }
-        
+
+        const chuckNorrisFacts = this.props.facts.factList;
+        const isSearching = this.props.facts.isSearching;
+
         return (
             <ScrollView>
                 <View style={style.click_container}>
                 {
-                    this.state.searching ? 
+                    isSearching ? 
                     <FlatList
-                        style={style.fact_list} 
-                        data={this.state.data} 
+                        style={style.fact_list}
+                        // contentContainerStyle={} 
+                        data={chuckNorrisFacts} 
                         renderItem={renderItems} 
                         keyExtractor={(_, index) => index.toString()} 
                     /> : 
@@ -44,3 +37,10 @@ export default class Facts extends Component {
     }
 
 }
+
+const mapStateToProps = (state) => {
+    const { facts, searching } = state;
+    return { facts, searching }
+  };
+
+export default connect(mapStateToProps)(Facts);

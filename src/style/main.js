@@ -25,8 +25,13 @@ export default StyleSheet.create({
     fontLess80: {
         fontSize: 20
     },
+    fontMore80: {
+        fontSize: 15
+    },
     fact_list: {
-        margin: 15
+        margin: 15,
+        flexDirection: 'column',
+        // alignItems: 'flex-start',
     },
     fact_box: {
         backgroundColor: 'white',
@@ -37,7 +42,8 @@ export default StyleSheet.create({
     },
     search_input: {
         borderBottomWidth: 2,
-        width: '100%'
+        width: '100%',
+        fontSize: 18
     },
     screen: {
         width: '100%',
@@ -45,7 +51,8 @@ export default StyleSheet.create({
     },
     search_container: {
         alignItems: 'center',
-        width: '90%'
+        width: '90%',
+        marginTop: 10
     },
     tag_search_container: {
         flexDirection: 'row',
@@ -53,13 +60,24 @@ export default StyleSheet.create({
         width: '90%',
         flexWrap: 'wrap',
     },
-    tag_search: {
+    tag_button: {
         backgroundColor: 'gray',
         padding: 10,
-        margin: 5
+        margin: 5,
+        borderRadius: 0,
+        flexGrow: 1,
     },
-    tag_color_font: {
+    tag_button_font: {
         color: 'white',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        textAlign: 'center'
+    },
+    margin_50: {
+        marginTop: 50
+    },
+    search_screen_title: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        marginBottom: 10
     }
 })
