@@ -5,6 +5,7 @@ import Fact from './Fact';
 import style from '../style/main';
 
 import { connect } from 'react-redux';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 class Facts extends Component {
@@ -16,7 +17,6 @@ class Facts extends Component {
 
         const chuckNorrisFacts = this.props.facts.factList;
         const isSearching = this.props.facts.isSearching;
-
         return (
             <ScrollView>
                 <View style={style.click_container}>
@@ -29,7 +29,11 @@ class Facts extends Component {
                         renderItem={renderItems} 
                         keyExtractor={(_, index) => index.toString()} 
                     /> : 
-                    <Text style={style.defaultColorFont}>Clique para pesquisar</Text>
+                    <View style={style.click_to_search}>
+                        <Icon style={style.share_icon} name="search" size={30} onPress={(props) => this.props.navigate('Search')} />
+                        <Text style={style.defaultColorFont}>Clique para pesquisar</Text>
+                    </View>
+                    
                 }
                 </View>
             </ScrollView>

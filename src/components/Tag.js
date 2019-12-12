@@ -21,7 +21,7 @@ class Tag extends Component {
             const obj = [{
                 ...res.data
             }]
-            
+
             console.log(obj)
             this.props.addFact(obj);
             this.props.navigation.navigate('Home')

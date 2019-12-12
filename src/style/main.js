@@ -20,7 +20,6 @@ export default StyleSheet.create({
     click_container: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: '90%',
     },
     fontLess80: {
         fontSize: 20
@@ -34,7 +33,7 @@ export default StyleSheet.create({
         // alignItems: 'flex-start',
     },
     fact_box: {
-        backgroundColor: 'white',
+        backgroundColor: '#ecf3f3',
         borderColor: '#14aa4b',
         borderWidth: 1,
         margin: 15,
@@ -79,5 +78,27 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 18,
         marginBottom: 10
+    },
+    tag_button_home: {
+        backgroundColor: 'gray',
+        padding: 5,
+        margin: 5,
+        marginTop: 20,
+        borderRadius: 0,
+        width: 120,
+    },
+    fact_tag_container: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    share_icon: {
+        marginTop: 20,
+        color: 'gray',
+    },
+    click_to_search: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        flex: 1
     }
+
 })
