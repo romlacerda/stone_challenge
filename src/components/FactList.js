@@ -5,7 +5,6 @@ import Fact from './Fact';
 import style from '../style/main';
 
 import { connect } from 'react-redux';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 
 class Facts extends Component {
@@ -30,10 +29,8 @@ class Facts extends Component {
                         keyExtractor={(_, index) => index.toString()} 
                     /> : 
                     <View style={style.click_to_search}>
-                        <Icon style={style.share_icon} name="search" size={30} onPress={(props) => this.props.navigate('Search')} />
                         <Text style={style.defaultColorFont}>Clique para pesquisar</Text>
                     </View>
-                    
                 }
                 </View>
             </ScrollView>

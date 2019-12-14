@@ -6,15 +6,19 @@ import axios from 'axios'
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addFact } from '../actions/FactActions';
+import { addFact, searchFact } from '../actions/FactActions';
 class SearchInput extends Component {
 
     state = {
-        value: null
+        value: null,
     }
 
     handleChange = (value) => {
         this.setState({ value })
+    }
+
+    AddLastSearch = (searched) => {
+        let searchs = [...this.state.searchs, this.state.value]
     }
 
     ListByFilter = (e) => {
@@ -24,8 +28,9 @@ class SearchInput extends Component {
             }
         })
         .then(res => {
-            console.log(res.data)
+            // this.AddLastSearch(this.state.value);
             this.props.addFact(res.data.result);
+            this.props.searchFact(this.state.value);
             this.props.navigation.navigate('Home')
         }).catch(ex => {
             console.log(ex);
@@ -44,13 +49,13 @@ class SearchInput extends Component {
 
 
 const mapStateToProps = (state) => {
-    const { facts, searching } = state
-    return { facts, searching }
+    const { facts, searching, searchs } = state
+    return { facts, searching, searchs }
   };
 
 const mapDispatchToProps = dispatch => (
     bindActionCreators({
-      addFact,
+      addFact, searchFact
     }, dispatch)
   );
   

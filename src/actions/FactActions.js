@@ -4,3 +4,10 @@ export const addFact = factObject => (
         payload: factObject,
     }
 );
+
+export const searchFact = searchObject => (
+    {
+        type: 'ADD_SEARCH',
+        payload: searchObject
+    }
+);

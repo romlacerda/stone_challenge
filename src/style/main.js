@@ -4,7 +4,9 @@ import { StyleSheet } from 'react-native'
 export default StyleSheet.create({
     header_bar: {
         backgroundColor: '#17aa4a',
-        padding: 10
+        padding: 10,
+        flexDirection: 'row',
+        justifyContent: 'space-between'
     },
     screen_default: {
         justifyContent: 'center',
@@ -85,7 +87,6 @@ export default StyleSheet.create({
         margin: 5,
         marginTop: 20,
         borderRadius: 0,
-        width: 120,
     },
     fact_tag_container: {
         flexDirection: 'row',
@@ -95,10 +96,28 @@ export default StyleSheet.create({
         marginTop: 20,
         color: 'gray',
     },
+    search_icon: {
+        marginTop: 0,
+        color: 'white',
+    },
     click_to_search: {
         justifyContent: 'center',
         alignItems: 'center',
         flex: 1
+    },
+    past_search: {
+        margin: 5
+    },
+    past_search_container: {
+        flexDirection: 'column',
+        alignItems: 'flex-start',
+    },
+    search_list: {
+        width: '90%',
+        marginTop: 30
+    },
+    font_default: {
+        fontSize: 16
     }
 
 })

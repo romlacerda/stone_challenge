@@ -5,6 +5,7 @@ import HeaderBar from '../components/HeaderBar'
 import SearchInput from '../components/SearchInput'
 import styles from '../style/main';
 import TagList from '../components/TagList';
+import SearchList from '../components/SearchList';
 
 export default Search = props => {
     return ( 
@@ -15,6 +16,7 @@ export default Search = props => {
                     <SearchInput navigation={props.navigation}/>
                 </View>
                 <TagList tags={props.tags} navigation={props.navigation}/>
+                <SearchList navigation={props.navigation}/>
             </View>
         </React.Fragment>
     )
