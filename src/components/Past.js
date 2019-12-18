@@ -5,6 +5,7 @@ import axios from 'axios'
 import { connect } from 'react-redux';
 import { addFact, searchFact } from '../actions/FactActions';
 import { bindActionCreators } from 'redux';
+import { Alert } from 'react-native';
 
 class Past extends Component {
     
@@ -18,6 +19,7 @@ class Past extends Component {
             this.props.addFact(res.data.result);
             this.props.navigation.navigate('Home')
         }).catch(ex => {
+            Alert.alert('Erro', 'Houve um erro de conexão.')
             console.log(ex);
         })
     }   

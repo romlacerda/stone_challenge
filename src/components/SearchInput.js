@@ -21,8 +21,8 @@ class SearchInput extends Component {
         let searchs = [...this.state.searchs, this.state.value]
     }
 
-    ListByFilter = (e) => {
-        axios.get(`https://api.chucknorris.io/jokes/search`, {
+    ListByFilter = async (e) => {
+        await axios.get(`https://api.chucknorris.io/jokes/search`, {
             params: {
                 'query': this.state.value
             }
@@ -33,7 +33,7 @@ class SearchInput extends Component {
             this.props.searchFact(this.state.value);
             this.props.navigation.navigate('Home')
         }).catch(ex => {
-            console.log(ex);
+            alert(error.message);
         })
     }   
 

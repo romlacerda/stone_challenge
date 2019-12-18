@@ -17,7 +17,7 @@ class Facts extends Component {
         const chuckNorrisFacts = this.props.facts.factList;
         const isSearching = this.props.facts.isSearching;
         return (
-            <ScrollView>
+            <ScrollView style={{flex: 1}}>
                 <View style={style.click_container}>
                 {
                     isSearching ? 
@@ -29,7 +29,6 @@ class Facts extends Component {
                         keyExtractor={(_, index) => index.toString()} 
                     /> : 
                     <View style={style.click_to_search}>
-                        <Text style={style.defaultColorFont}>Clique para pesquisar</Text>
                     </View>
                 }
                 </View>

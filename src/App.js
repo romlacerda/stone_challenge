@@ -9,6 +9,8 @@ import axios from 'axios'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers/store';
+import { Alert } from 'react-native'
+
 
 const store = createStore(reducer);
 
@@ -27,6 +29,7 @@ export default class App extends React.Component {
             const tags = res.data;
             this.setState({tags});
         }).catch(ex => {
+            Alert.alert('ok')
             console.log(ex);
         })
     }

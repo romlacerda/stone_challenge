@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing should render correctly 1`] = `
+"<View style={{...}}>
+  <Text style={{...}}>
+    Últimas pesquisas
+  </Text>
+  <View style={{...}}>
+    <Connect(Past) navigation={[undefined]} past_name={{...}} />
+  </View>
+</View>"
+`;

@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checar CSS da quantidade de caracteres snapshot renders 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#ecf3f3",
+      "borderColor": "#14aa4b",
+      "borderWidth": 1,
+      "margin": 15,
+      "padding": 20,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 15,
+      }
+    }
+  >
+    in brightest day in blackest night no evil shall escape my sight let those who worship evils might, beware my power, green lanterns light!
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={false}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "gray",
+          "borderRadius": 0,
+          "margin": 5,
+          "marginTop": 20,
+          "opacity": 1,
+          "padding": 5,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "white",
+            "textAlign": "center",
+            "textTransform": "uppercase",
+          }
+        }
+      >
+        DOG
+      </Text>
+    </View>
+    <Text
+      allowFontScaling={false}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "color": undefined,
+            "fontSize": 30,
+          },
+          Object {
+            "color": "gray",
+            "marginTop": 20,
+          },
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</View>
+`;

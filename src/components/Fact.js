@@ -3,11 +3,14 @@ import { View, Text, TouchableOpacity, Share, Button } from 'react-native'
 import style from '../style/main'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-onShare = async () => {
+
+export default props =>  {
+
+  onShare = async () => {
     try {
       const result = await Share.share({
         message:
-          'React Native | A framework for building native apps using React',
+          props.value,
       });
 
       if (result.action === Share.sharedAction) {
@@ -24,7 +27,8 @@ onShare = async () => {
     }
   };
 
-export default props => 
+
+  return (
     <View style={style.fact_box}>
         <Text style={props.value.length > 80 ? style.fontMore80 : style.fontLess80}>{props.value}</Text>
         <View style={style.fact_tag_container}>
@@ -34,4 +38,5 @@ export default props =>
             <Icon style={style.share_icon} name="share" size={30} onPress={onShare} />
         </View>
     </View>
-
+  )
+}

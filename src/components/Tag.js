@@ -8,8 +8,8 @@ import { addFact } from '../actions/FactActions';
 
 class Tag extends Component {
 
-    ListByTag = (tag) => {
-        axios.get(`https://api.chucknorris.io/jokes/random`, {
+    ListByTag = async (tag) => {
+        await axios.get(`https://api.chucknorris.io/jokes/random`, {
             params: {
                 'category': tag
             }
@@ -22,11 +22,10 @@ class Tag extends Component {
                 ...res.data
             }]
 
-            console.log(obj)
             this.props.addFact(obj);
             this.props.navigation.navigate('Home')
         }).catch(ex => {
-            console.log(ex);
+            alert(error.message);
         })
     } 
  

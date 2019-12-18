@@ -29,7 +29,13 @@ const searchReducer = (state = initialState, action) => {
             const { facts, searching, searchs } = state;
             const value = action.payload;
             let newState = { facts, searching, searchs };
-            newState.searchs.push(value);
+            
+            let newArray = newState.searchs.filter((v, i) => {
+                return v !== value
+            });
+            newState.searchs = newArray;
+            newState.searchs.unshift(value);
+
             return newState;
         default:
             return state;

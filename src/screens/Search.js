@@ -8,6 +8,7 @@ import TagList from '../components/TagList';
 import SearchList from '../components/SearchList';
 
 export default Search = props => {
+    
     return ( 
         <React.Fragment>
             <HeaderBar title='SEARCH FACTS'/>
