@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, FlatList } from 'react-native';
+import { View, Text } from 'react-native';
 
 import Tag from './Tag';
 import style from '../style/main';

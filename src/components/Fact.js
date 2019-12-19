@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { View, Text, TouchableOpacity, Share, Button } from 'react-native'
+import React from 'react'
+import { View, Text, TouchableOpacity, Share } from 'react-native'
 import style from '../style/main'
 import Icon from 'react-native-vector-icons/MaterialIcons';
 

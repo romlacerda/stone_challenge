@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { View, Text, Button } from 'react-native'
 
 import styles from '../style/main'
 import FactList from '../components/FactList'

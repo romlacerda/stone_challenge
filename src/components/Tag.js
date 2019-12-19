@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Button, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity } from 'react-native'
 import style from '../style/main'
 import axios from 'axios'
 import { connect } from 'react-redux';
