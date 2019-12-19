@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Alert } from 'react-native'
 import style from '../style/main'
 import axios from 'axios'
 import { connect } from 'react-redux';
 import { addFact, searchFact } from '../actions/FactActions';
 import { bindActionCreators } from 'redux';
-import { Alert } from 'react-native';
 
 class Past extends Component {
     

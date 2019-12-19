@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, ScrollView, FlatList } from 'react-native';
+import { View, ScrollView, FlatList } from 'react-native';
 
 import Fact from './Fact';
 import style from '../style/main';
