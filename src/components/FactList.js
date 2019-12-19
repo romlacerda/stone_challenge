@@ -23,7 +23,6 @@ class Facts extends Component {
                     isSearching ? 
                     <FlatList
                         style={style.fact_list}
-                        // contentContainerStyle={} 
                         data={chuckNorrisFacts} 
                         renderItem={renderItems} 
                         keyExtractor={(_, index) => index.toString()} 

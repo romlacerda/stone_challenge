@@ -28,7 +28,6 @@ class SearchInput extends Component {
             }
         })
         .then(res => {
-            // this.AddLastSearch(this.state.value);
             this.props.addFact(res.data.result);
             this.props.searchFact(this.state.value);
             this.props.navigation.navigate('Home')

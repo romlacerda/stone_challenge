@@ -15,7 +15,6 @@ class HomeScreen extends Component {
             <React.Fragment>
                 <HeaderBar title='CHUCK NORRIS FACTS' navigate={navigate}/>
                 <FactList navigate={navigate} />
-                {/* <Button title='Teste' onPress={() => navigate('Search', {name: 'Jane'})}></Button> */}
             </React.Fragment>
         )
     }

@@ -15,9 +15,6 @@ class Tag extends Component {
             }
         })
         .then(res => {
-            // this.props.navigation.navigate('Home', {
-            //     tags: res.data
-            // })
             const obj = [{
                 ...res.data
             }]

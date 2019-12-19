@@ -11,7 +11,6 @@ export class SearchList extends Component {
             <View style={style.search_list}>
                 <Text style={style.search_screen_title}>Últimas pesquisas</Text>
                 <View style={style.past_search_container}>
-                    {/* Não e uma boa pratica colocar o index como key, porém, neste caso aqui, não vi motivo para ser algo diferente. */}
                     {this.props.searchs.searchs.map((data, index) => <Past key={index} navigation={this.props.navigation} past_name={data}/>)}
                 </View>
             </View>

@@ -17,7 +17,6 @@ export default class TagList extends Component {
             <View style={style.margin_50}>
                 <Text style={style.search_screen_title}>Tags</Text>
                 <View style={style.tag_search_container}>
-                    {/* Não e uma boa pratica colocar o index como key, porém, neste caso aqui, não vi motivo para ser algo diferente. */}
                     {this.ShuffleTags().map((data, index) => <Tag key={index} name={data} navigation={this.props.navigation}/>)}
                 </View>
             </View>
