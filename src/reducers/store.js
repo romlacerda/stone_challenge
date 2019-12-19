@@ -1,38 +1,36 @@
 import { combineReducers } from 'redux';
+
 const initialState = {
     facts: [],
     searching: false,
-    searchs: []
-}
+    searchs: [],
+};
 
 const factReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'ADD_FACT':
             const { facts, searching, searchs } = state;
-            
+
             const factList = action.payload;
 
             const isSearching = true;
 
-            const newState = { factList, isSearching, searchs }
+            const newState = { factList, isSearching, searchs };
             return newState;
         default:
             return state;
-        
     }
-}
+};
 
 
 const searchReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'ADD_SEARCH':
             const { facts, searching, searchs } = state;
             const value = action.payload;
-            let newState = { facts, searching, searchs };
-            
-            let newArray = newState.searchs.filter((v, i) => {
-                return v !== value
-            });
+            const newState = { facts, searching, searchs };
+
+            const newArray = newState.searchs.filter((v, i) => v !== value);
             newState.searchs = newArray;
             newState.searchs.unshift(value);
 
@@ -40,9 +38,9 @@ const searchReducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
+};
 
 export default combineReducers({
     facts: factReducer,
-    searchs: searchReducer
-})
+    searchs: searchReducer,
+});

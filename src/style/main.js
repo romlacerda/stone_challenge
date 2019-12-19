@@ -1,12 +1,12 @@
-import React from 'react'
-import { StyleSheet } from 'react-native'
+import React from 'react';
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
     header_bar: {
         backgroundColor: '#17aa4a',
         padding: 10,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     screen_default: {
         justifyContent: 'center',
@@ -14,20 +14,20 @@ export default StyleSheet.create({
     },
     header_title: {
         fontSize: 20,
-        color: 'white'
+        color: 'white',
     },
     defaultColorFont: {
-        color: '#14aa4b'
+        color: '#14aa4b',
     },
     click_container: {
         justifyContent: 'center',
         alignItems: 'center',
     },
     fontLess80: {
-        fontSize: 20
+        fontSize: 20,
     },
     fontMore80: {
-        fontSize: 15
+        fontSize: 15,
     },
     fact_list: {
         margin: 15,
@@ -39,21 +39,21 @@ export default StyleSheet.create({
         borderColor: '#14aa4b',
         borderWidth: 1,
         margin: 15,
-        padding: 20
+        padding: 20,
     },
     search_input: {
         borderBottomWidth: 2,
         width: '100%',
-        fontSize: 18
+        fontSize: 18,
     },
     screen: {
         width: '100%',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     search_container: {
         alignItems: 'center',
         width: '90%',
-        marginTop: 10
+        marginTop: 10,
     },
     tag_search_container: {
         flexDirection: 'row',
@@ -71,15 +71,15 @@ export default StyleSheet.create({
     tag_button_font: {
         color: 'white',
         textTransform: 'uppercase',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     margin_50: {
-        marginTop: 50
+        marginTop: 50,
     },
     search_screen_title: {
         fontWeight: 'bold',
         fontSize: 18,
-        marginBottom: 10
+        marginBottom: 10,
     },
     tag_button_home: {
         backgroundColor: 'gray',
@@ -90,7 +90,7 @@ export default StyleSheet.create({
     },
     fact_tag_container: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
     },
     share_icon: {
         marginTop: 20,
@@ -103,10 +103,10 @@ export default StyleSheet.create({
     click_to_search: {
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1
+        flex: 1,
     },
     past_search: {
-        margin: 5
+        margin: 5,
     },
     past_search_container: {
         flexDirection: 'column',
@@ -114,10 +114,10 @@ export default StyleSheet.create({
     },
     search_list: {
         width: '90%',
-        marginTop: 30
+        marginTop: 30,
     },
     font_default: {
-        fontSize: 16
-    }
+        fontSize: 16,
+    },
 
-})
+});
